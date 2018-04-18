@@ -14,6 +14,7 @@
     <script type="text/babel">
 
       class Counter extends React.Component {
+        // set initial state for week value
         constructor(props) {
           super(props);
           this.state = {
@@ -21,6 +22,18 @@
           }
         }
 
+        increment(event) {
+          this.setState({
+            number: this.state.number + 1
+          })
+        }
+
+        // ensure this.state.number is positive
+        decrement(event) {
+          this.setState({
+            number: Math.max(1, this.state.number -1)
+          })
+        }
 
         render() {
           return (
@@ -28,17 +41,21 @@
               <img src={this.props.image} alt="Bloc Logo"/>
               <h2>Current program: {this.props.label}</h2>
               <h3>Current week: {this.state.number}</h3>
+              <button onClick={this.increment.bind(this)}>Increment</button>
+              <button onClick={this.decrement.bind(this)}>Decrement</button>
               <p>Current Date: {this.props.date.toLocaleDateString()}</p>
             </div>
           );
         }
       }
 
+      // immutable props definition to pass to component unidirectionally
       const info = {
         date: new Date(),
         image: 'https://avatars0.githubusercontent.com/u/1441485?v=4&s=280',
       }
 
+      // immutable default props for when they are not specifed in component
       Counter.defaultProps = {
         label: "Web Developer Track"
       }
