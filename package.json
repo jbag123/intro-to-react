@@ -1,0 +1,23 @@
+{
+  "name": "intro-to-react",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "react-hot-loader": "^4.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbag123/intro-to-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbag123/intro-to-react/issues"
+  },
+  "homepage": "https://github.com/jbag123/intro-to-react#readme",
+  "description": ""
+}
